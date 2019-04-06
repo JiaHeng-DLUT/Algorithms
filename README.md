@@ -105,10 +105,4 @@ int main() {
 }
 ```
 
-## Math
-
-### $\sum_{i=1}^m=n$
-
-- Num of positive integer solutions: $C^{m-1}_{n-1}​$
-- Num of nonnegative integer solutions: $C^{m-1}_{n+m-1}$
-
+## 
