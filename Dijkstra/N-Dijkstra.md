@@ -13,6 +13,12 @@ using namespace std;
 const int MAX_N = 500+5;
 const int INF = 1000000000;
 
+/*
+ * N: number of vertex
+ * M: number of edges
+ * C1: start vertex
+ * C2: destination vertex
+ */
 int N, M, C1, C2;
 int t[MAX_N];
 int d[MAX_N][MAX_N];
@@ -102,3 +108,6 @@ int main() {
 ## References
 
 1. [获取多条最短路径的Dijkstra算法](https://blog.csdn.net/u013615687/article/details/69062803)
+
+
+

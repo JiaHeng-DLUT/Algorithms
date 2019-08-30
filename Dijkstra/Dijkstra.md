@@ -15,64 +15,57 @@
 
 ```c++
 #include <iostream>
+#include <vector>
 using namespace std;
 
 const int n = 6;
 const int INF = 10000;
 
 int g[n][n] = {
-{INF, 12, 10, INF, 30, 100},
-{INF, INF, 5, INF, INF, INF},
-{INF, INF, INF, 50, INF, INF},
-{INF, INF, INF, INF, INF, 10},
-{INF, INF, INF, 20, INF, 60},
-{INF, INF, INF, INF, INF, INF}
+	{INF, 12, 10, INF, 30, 100},
+	{INF, INF, 5, INF, INF, INF},
+	{INF, INF, INF, 50, INF, INF},
+	{INF, INF, INF, INF, INF, 10},
+	{INF, INF, INF, 20, INF, 60},
+	{INF, INF, INF, INF, INF, INF}
 };
-/*
- * d: distance
- * v: visited
- */
-int d[n], v[n], index; 
+// d: distance
+vector<int> d;
 
-bool end() {
+void dijkstra(int start) {
 	for (int i = 0; i < n; i++) {
-		if (v[i] == 0) {
-			return false;
-		}
+		d.push_back(g[start][i]);
 	}
-	return true;
-}
+	vector<bool> v(n, false); // v: visited
+	v[start] = 1;
 
-int findMin() {
-	int Min = INF, index = -1;
+
 	for (int i = 0; i < n; i++) {
-		if (d[i] < Min && v[i] == 0) {
-			Min = d[i];
-			index = i;
+		int closest = INF, toVisit = -1;
+		for (int j = 0; j < n; j++) {
+			if (d[j] < closest && v[j] == 0) {
+				closest = d[j];
+				toVisit = j;
+			}
 		}
-	}
-	return index;
-}
-
-void update() {
-	for (int i = 0; i < n; i++) {
-		if (v[i] == 0 && d[index] + g[index][i] < d[i]) {
-			d[i] = d[index] + g[index][i];
+		if (toVisit != -1) {
+			cout << "New Vertex: V" << toVisit << endl;
+			v[toVisit] = true;
+			for (int j = 0; j < n; j++) {
+				if (v[j] == 0 && d[toVisit] + g[toVisit][j] < d[j]) {
+					cout << "V0 --> V" << toVisit << " --> V" << j << " : " << d[toVisit] + g[toVisit][j] << endl;
+					d[j] = d[toVisit] + g[toVisit][j];
+				}
+			}
 		}
 	}
 }
 
 int main() {
-	for (int i = 0; i < n; i++) {
-		d[i] = g[0][i];
-		v[i] = 0;
-	}
-	v[0] = 1;
-	while (!end()) {
-		index = findMin();
-		v[index] = 1;
-		update();
-	}
+	// solve
+	dijkstra(0);
+	// output
+	cout << "Path length: ";
 	for (int i = 1; i < n; i++) {
 		cout << d[i] << " ";
 	}
@@ -80,7 +73,12 @@ int main() {
 }
 
 /*
- * 12 10 50 30 60 
+ * 12 10 50 30 60
  */
 
 ```
+
+## References
+
+1. [数据结构、算法及应用](https://book.douban.com/subject/19960783/)
+
