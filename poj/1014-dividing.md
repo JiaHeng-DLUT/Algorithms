@@ -1,6 +1,6 @@
 # 1014 Dividing
 
-```c++
+```cpp
 #include <string.h>
 #include <iostream>
 #include <algorithm>
@@ -82,6 +82,5 @@ int main(int argc, const char * argv[]) {
     }
     return 0;
 }
-
 ```
 

@@ -6,7 +6,7 @@
 
 ## Answer
 
-```c++
+```cpp
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -102,12 +102,9 @@ int main() {
     cout << spn << " " << mtn << endl;
     return 0;
 }
-
 ```
 
 ## References
 
 1. [获取多条最短路径的Dijkstra算法](https://blog.csdn.net/u013615687/article/details/69062803)
-
-
 

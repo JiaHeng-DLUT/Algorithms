@@ -1,8 +1,8 @@
 # Lexicographical order
 
-- Problem: [CSL 的字符串](https://ac.nowcoder.com/acm/contest/551/D)
+* Problem: [CSL 的字符串](https://ac.nowcoder.com/acm/contest/551/D)
 
-```c++
+```cpp
 #include <cstdio>
 #include <cmath>
 #include <cstdlib>
@@ -55,6 +55,5 @@ int main() {
     }
     printf("\n");
 }
-
 ```
 

@@ -1,6 +1,6 @@
 # strtol
 
-```c++
+```cpp
 #include <stdlib.h>     /* strtol */
 
 int main () {
@@ -11,6 +11,5 @@ int main () {
     li2 = strtol(pEnd, NULL, 10); // li = 23
     return 0;
 }
-
 ```
 
