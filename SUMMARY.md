@@ -13,6 +13,4 @@
 * [Sorting algorithm](sort.md)
 * [Dijkstra](dijkstra/README.md)
   * [Dijkstra](dijkstra/dijkstra.md)
-  * [Dijkstra](dijkstra/dijkstra-1.md)
-  * [N-Dijkstra](dijkstra/n-dijkstra.md)
 
