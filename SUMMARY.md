@@ -11,6 +11,4 @@
   * [1014 Dividing](poj/1014-dividing.md)
   * [1012 Joseph](poj/1012-joseph.md)
 * [Sorting algorithm](sort.md)
-* [Dijkstra](dijkstra/README.md)
-  * [Dijkstra](dijkstra/dijkstra.md)
 
